@@ -80,7 +80,7 @@ function Home() {
         <div className="pattern-islamic absolute inset-0" aria-hidden="true" />
         <div className="relative mx-auto grid w-full max-w-[1100px] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="animate-rise">
-            <p dir="rtl" lang="ar" className="font-display text-2xl text-gold sm:text-3xl">
+            <p dir="rtl" lang="ar" className="text-center font-display text-2xl text-gold sm:text-3xl">
               بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
             </p>
             <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl lg:text-[3.4rem]">
