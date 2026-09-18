@@ -4,7 +4,7 @@ export const jamia = {
     "Jamia Tul Madina Faizan e Madina, K.L.P Road, Khanqah Sharif, Bahawalpur",
   founded: "2010",
   parent: "Dawat-e-Islami (Education Department)",
-  mottoUrdu: "میں اپنی اور ساری دنیا کے لوگوں کی اصلاح کی کوشش کروں گا",
+  mottoUrdu: "مجھے اپنی اور ساری دنیا کے لوگوں کی اصلاح کی کوشش کرنی ہے",
   mottoEnglish:
     "I must strive to reform myself and the people of the entire world",
   phone: "03066862692",
