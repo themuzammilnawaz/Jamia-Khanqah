@@ -12,7 +12,15 @@ import {
   SectionHeading,
   useReveal,
 } from "@/components/site/primitives";
-import { ayah, courses, featuredPosition, hadith, jamia, stats } from "@/data/site";
+import {
+  ayah,
+  courses,
+  featuredPosition,
+  featuredTeacher,
+  hadith,
+  jamia,
+  stats,
+} from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -170,12 +178,12 @@ function Home() {
         </div>
       </Section>
 
-      {/* ─── FEATURED ACHIEVEMENT ─────────────────────────────── */}
+      {/* ─── FEATURED POSITION HOLDER (Muzammil Nawaz) ─────────── */}
       <Section tone="green">
         <Reveal>
           <SectionHeading
             invert
-            eyebrow="Featured Achievement"
+            eyebrow="Featured Achievement — Student"
             title="2nd Position — Matric 2024, B.I.S.E Bahawalpur"
           />
         </Reveal>
@@ -218,8 +226,61 @@ function Home() {
         </Reveal>
       </Section>
 
-      {/* ─── COURSES ──────────────────────────────────────────── */}
+      {/* ─── FEATURED BEST TEACHER (Muhammad Afeef Madani) ────── */}
       <Section tone="cream">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Featured Achievement — Teacher"
+            title="Best Teacher Award 2024"
+          />
+        </Reveal>
+        <Reveal
+          delay={80}
+          className="mt-8 grid gap-6 rounded-md border border-gold/40 bg-gold-soft p-6 sm:p-8 lg:grid-cols-[0.75fr_1fr] lg:items-center"
+        >
+          <img
+            src={img.bestTeacher}
+            alt={`${featuredTeacher.name} — Best Teacher Award 2024 recipient`}
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-md object-cover object-top"
+          />
+          <div>
+            <Award className="h-8 w-8 text-gold-foreground" aria-hidden="true" />
+            <p className="mt-4 font-display text-2xl font-semibold text-primary sm:text-3xl">
+              {featuredTeacher.name}
+            </p>
+            <p className="mt-1 text-sm font-semibold text-gold-foreground">
+              {featuredTeacher.award} {featuredTeacher.year}
+            </p>
+            <dl className="mt-5 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+              {[
+                ["Award", featuredTeacher.award],
+                ["Year", featuredTeacher.year],
+                ["Awarded by", featuredTeacher.awardedBy],
+                ["Category", featuredTeacher.category],
+                ["Institution", featuredTeacher.institution],
+                ["Level", featuredTeacher.level],
+              ].map(([label, value]) => (
+                <div key={label}>
+                  <dt className="text-[11px] font-bold uppercase tracking-[0.14em] text-primary">
+                    {label}
+                  </dt>
+                  <dd className="mt-0.5 text-sm font-semibold text-foreground">{value}</dd>
+                </div>
+              ))}
+            </dl>
+            <Link
+              to="/best-teacher"
+              className="mt-6 inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-bold text-primary-foreground transition hover:bg-primary-strong"
+            >
+              View award details <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* ─── COURSES ──────────────────────────────────────────── */}
+      <Section>
         <Reveal>
           <SectionHeading
             eyebrow="Courses"
@@ -253,7 +314,7 @@ function Home() {
       </Section>
 
       {/* ─── LEADERSHIP ───────────────────────────────────────── */}
-      <Section>
+      <Section tone="cream">
         <Reveal>
           <SectionHeading eyebrow="Administration" title="Leadership of the Jamia" />
         </Reveal>
@@ -289,7 +350,7 @@ function Home() {
       </Section>
 
       {/* ─── GALLERY PREVIEW ──────────────────────────────────── */}
-      <Section tone="cream">
+      <Section>
         <Reveal>
           <SectionHeading eyebrow="Gallery" title="Glimpses of the Jamia" />
         </Reveal>
@@ -317,7 +378,7 @@ function Home() {
       <Section tone="green">
         <Reveal className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <Award className="h-7 w-7 text-gold-light" aria-hidden="true" />
+            <GraduationCap className="h-7 w-7 text-gold-light" aria-hidden="true" />
             <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
               Admissions open after Ramadan
             </h2>
@@ -344,4 +405,4 @@ function Home() {
       </Section>
     </>
   );
-}
+                             }
