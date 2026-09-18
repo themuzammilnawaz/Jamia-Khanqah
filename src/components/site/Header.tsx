@@ -23,7 +23,7 @@ export function Header() {
               Jamia Tul Madina
             </p>
             <p className="truncate text-[10px] font-bold uppercase tracking-[0.16em] text-muted-foreground">
-              Khanqah Sharif • Dawat-e-Islami
+              Khanqah Sharif
             </p>
           </div>
         </Link>
