@@ -56,6 +56,7 @@ export const hadith = {
   reference: "Sahih al-Bukhari",
 } as const;
 
+/** Featured student achievement — Muzammil Nawaz, Matric 2024 position holder. */
 export const featuredPosition = {
   student: "Muhammad Muzammil Nawaz",
   position: "2nd Position",
@@ -65,6 +66,17 @@ export const featuredPosition = {
   year: "2024",
   board: "B.I.S.E Bahawalpur",
   level: "Division Level",
+} as const;
+
+/** Featured teacher achievement — Muhammad Afeef Madani, Best Teacher Award 2024. */
+export const featuredTeacher = {
+  name: "Muhammad Afeef Madani",
+  award: "Best Teacher Award",
+  year: "2024",
+  awardedBy: "Government of Punjab",
+  category: "Teaching Quality & Character",
+  institution: "Jamia Tul Madina Khanqah Sharif",
+  level: "National Level",
 } as const;
 
 /**
